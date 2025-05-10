@@ -1,0 +1,1263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 1450px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+    background: #fff;
+    padding-left: 40px;
+}
+/*Wszystkie linki będą niepodkreślone*/
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.conteiner {
+    max-width: 1450px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo {
+    padding: 50px 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo .moto {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 55px;
+    color: #5946d7;
+    transition: all 500ms ease;
+    margin-top: -7px;
+}
+
+.logo .moto:hover {
+    color: #2e1066;
+    transform: scale(1.1);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #410f9e;
+}
+
+.logo .search input {
+    border-radius: 10px;
+    width: 430px;
+    padding: 10px 0;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    outline: none;
+    left: -15px;
+    top: 12px;
+    z-index: 1;
+}
+
+.logo .search img {
+    z-index: 2;
+    position: relative;
+    top: 18px;
+    left: -60px;
+}
+
+.logo .search input::placeholder {
+    color: #55556d;
+    font-size: 16px;
+}
+
+.block {
+    display: flex;
+    padding-top: 20px;
+}
+
+.block img {
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+}
+
+.conteiner hr {
+    margin: -55px 0;
+    border: 0;
+    height: 2px;
+    background: #e3e3e8;
+    width: 100%;
+}
+
+.categories {
+    padding-top: 70px;
+    display: flex;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.categories a {
+    color: black;
+}
+
+.categories .btn {
+    background: #5946d7;
+    color: #fff;
+    width: 168px;
+    height: 44px;
+    border-radius: 10px;
+    transition: all 500ms ease;
+    margin: 5px 50px;
+    border: 0;
+}
+
+.categories .btn:hover {
+    background: #410f9e;
+    transform: scale(1.1);
+}
+
+.categories .to,
+.categories .olej,
+.categories .original,
+.categories .nieoriginal,
+.categories .zarowka,
+.categories .bateria{
+    border: none;
+    transition: all 500ms ease;
+    margin-top: 5px;
+    background: #fff;
+    text-decoration: none;
+    margin: 5px 5px;
+    font-weight: 400;
+}
+
+.categories .to:hover,
+.categories .olej:hover,
+.categories .original:hover,
+.categories .nieoriginal:hover,
+.categories .zarowka:hover,
+.categories .bateria:hover{
+    border-radius: 10px;
+    cursor: pointer;
+    background: #f4f5f6;
+}
+
+.categories .to {
+    width: 139px;
+    height: 44px;
+}
+
+.categories .olej {
+    width: 100px;
+    height: 44px;
+}
+
+.categories .original {
+    width: 189px;
+    height: 44px;
+}
+
+.categories .nieoriginal {
+    width: 204px;
+    height: 44px;
+}
+
+.categories .zarowka {
+    width: 96px;
+    height: 44px;
+}
+
+.categories .bateria {
+    width: 123px;
+    height: 44px;
+}
+
+.categories .kosz {
+    width: 167px;
+    height: 44px;
+    border: none;
+    transition: all 500ms ease;
+    margin-top: 5px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 500;
+
+}
+
+.categories img {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    padding-top: 12px;
+    left: -140px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background: #fff;
+    top: 100%;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    z-index: 3;
+    background: #ebebef;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 15px 15px;
+    color: black;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.wrapper {
+    margin-top: 20px;
+    background: #f3f3f3;
+    height: 900px;
+    padding-bottom: 40px;
+}
+
+.wrapper1 {
+    margin-top: 20px;
+    background: #f3f3f3;
+    height: auto;
+    padding-bottom: 40px;
+}
+
+.wrapper1 {
+    position: relative;
+    margin-bottom: -70px;
+    width: 1440px;
+    left: 5px;
+}
+
+.wrapper2 {
+    margin-top: 20px;
+    background: #f3f3f3;
+    height: auto;
+    padding-bottom: 40px;
+}
+
+.wrapper3 {
+    background: #ebebef;
+    margin-top: 20px;
+    height: auto;
+}
+
+.fone {
+    color: black;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.fone img {
+    position: relative;
+    top: 20px;
+    width: 1260px;
+    height: 420px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 25px;
+    z-index: 1;
+}
+
+.present .foneprocent {
+    background: orange;
+    border-radius: 10px;
+    padding: 1px 10px;
+}
+
+.present h1 {
+    font-weight: 700;
+    font-size: 40px;
+    width: 627px;
+    position: relative;
+    left: 150px;
+    bottom: 350px;
+    z-index: 2;
+}
+
+.present p {
+    width: 450px;
+    font-weight: 400;
+    font-size: 18px;
+    position: relative;
+    left: 150px;
+    bottom: 345px;
+    z-index: 2;
+}
+
+.present img {
+    width: 483px;
+    position: relative;
+    left: 800px;
+    bottom: 435px;
+    z-index: 2;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1260px;
+    height: 402px;
+    gap: 0;
+    line-height: 0;
+    margin: 0 auto;
+    justify-content: center;
+    position: relative;
+    bottom: 400px;
+    left: 5px;
+}
+
+.nav .block button{
+    width: 420px;
+    height: 100px;
+    margin-top: -30px;
+    background: #fdfdfd;   
+    transition: all 500ms ease;
+}
+
+.nav .block button img {
+    width: 48px;
+    height: 48px;
+    float: left;
+    margin-left: 20px;
+}
+
+.nav .block button h4,
+.nav .block button p{
+    text-align: left;
+    position: relative;
+    left: 30px;
+    top: 7px;
+} 
+
+.nav .block button:hover{
+    transform: scale(1.1);
+    background: #ebebef;
+    cursor: pointer;
+}
+
+.nav .block button:hover h4 {
+    color: #5946d7;
+}
+
+.nav .block .specyal button {
+    background: url('/img/bg.png')center center;
+    background-size: 150% 150%;
+    background-position: center;
+    position: relative;
+    bottom: 4px;
+}
+
+.nav .block .specyal .specyal1 {
+    float: right;
+    position: relative;
+    top: 10px;
+}
+
+.olej {
+    width: 1262px;
+    height: 470px;
+    margin: 0 auto;
+}
+
+.olej .wszolej {
+    display: flex;
+}
+
+.olej h2 {
+    font-weight: 500;
+    font-size: 24px;
+    padding-top: 50px;
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.olej button {
+    width: 177px;
+    height: 40px;
+    position: relative;
+    top: 48px;
+    background: #f4f5f6;
+    border: 0;
+    border-radius: 10px;
+    color: #5946d7;
+    transition: all 500ms ease;
+    left: 1040px;
+}
+
+.olej button:hover {
+    transform: scale(1.1);
+}
+
+.div1 {
+    width: 1350px;
+    height: 470px;
+    margin-left: -20px;
+    padding-bottom: 100px;
+    flex-wrap: nowrap;
+    padding-left: 80px;
+}
+
+.div1 .olej .wszolej h2 {
+    font-weight: 600;
+}
+
+.div1 .mobil {
+    position: relative;
+    left: 26px;
+    bottom: 350px;
+}
+
+.mobil {
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.mobil button {
+    width: 300px;
+    height: 410px;
+    margin: 0 auto;
+    justify-content: center;
+    justify-content: space-between;
+    margin-right: 20px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: all 500ms ease;
+    position: relative;
+    padding-top: 100px;
+}
+
+.mobil button:hover {
+    transform: scale(1.1);
+}
+
+.mobil img {
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.mobil button img {
+    width: 210px;
+    height: 220px;
+    margin: 0 auto;
+    justify-content: center;
+    position: relative;
+    bottom: 45px;
+}
+
+.mobil button p,
+.mobil button h4,
+.mobil button h1 {position: relative;
+    bottom: 35px;
+    padding-top: 10px;
+}
+
+.mobil {
+    padding-left: 15px;
+}
+
+.reklama {
+    width: 1261px;
+    height: 250px;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    margin-left: 85px;
+    padding: auto;
+}
+
+.reklama .block {
+    max-width: 407px;
+    max-height: 250px;
+    padding-left: 40px;
+}
+
+.reklama .block img {
+    width: 407px;
+    height: 250px;
+    z-index: 1;
+}
+
+.reklama .block h3 {
+    font-size: 24px;
+    z-index: 2;
+    width: 232px;
+    position: relative;
+    padding-top: 10px;
+    margin-left: -340px;
+}
+
+.reklama .block button {
+    background: #5946d7;
+    width: 129px;
+    height: 40px;
+    border-radius: 5px;
+    z-index: 2;
+    border: 0;
+    position: relative;
+    top: 165px;
+    left: -237px;
+    color: #fff;
+}
+
+.polecenie {
+    width: 1280px;
+    height: 474px;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 70px 70px;
+}
+
+.polecenie h2 {
+    position: relative;
+    left: 12px;
+}
+
+.polecenie .objects1 {
+    display: flex;
+    padding-top: 50px;
+}
+
+.polecenie .objects1 button {
+    width: 300px;
+    height: 410px;
+    margin-left: 25px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 500ms ease;
+    position: relative;
+    left: -10px;
+}
+
+.polecenie .objects1 button:hover {
+    transform: scale(1.1);
+}
+
+.polecenie .objects1 button img {
+    width: 210px;
+    height: 220px;
+    padding: 15px 15px;
+}
+
+.polecenie .objects1 button p,
+.polecenie .objects1 button h4,
+.polecenie .objects1 button h1,
+.frequentlysold .objects2 button p,
+.frequentlysold .objects2 button h4,
+.frequentlysold .objects2 button h1 {
+    padding-top: 10px;
+}
+
+.frequentlysold {
+    width: 1280px;
+    height: 474px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.frequentlysold h2 {
+    padding-bottom: 50px;
+    position: relative;
+    left: 12px;
+}
+
+.frequentlysold .objects2 {
+    display: flex;
+}
+
+.frequentlysold .objects2 button {
+    width: 300px;
+    height: 410px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-left: 25px;
+    transition: all 500ms ease;
+    position: relative;
+    left: -10px;
+    margin-bottom: 50px;
+}
+
+.frequentlysold .objects2 button:hover {
+    transform: scale(1.1);
+}
+
+.frequentlysold .objects2 button img {
+    width: 210px;
+    height: 220px;
+    padding: 15px 15px;
+}
+
+/* Footer */
+
+footer {
+    width: 1440px;
+    height: 360px;
+    background: #2f2b4a;
+    margin: 0 auto;
+    justify-content: center;
+    color: #fff;
+    margin-top: 70px;
+    display: block;
+    flex-wrap: wrap;
+}
+
+footer .blocks {
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    position: relative;
+    top: 10px;    
+    padding: 20px 20px;
+    margin: 20px 20px;
+}
+
+
+footer .blocks ul {
+    list-style: none;
+}
+
+footer .blocks ul li {
+    opacity: 0.8;
+    color: #fff;
+    padding: 10px 10px;
+    padding: 5px 10px;
+}
+
+footer .blocks ul li a {
+    color: #f4f5f7;
+}
+
+footer .blocks .abc1 {
+    position: relative;
+    left: 15px;
+}
+
+footer .blocks .abc2 {
+    position: relative;
+    left: 15px;
+}
+
+footer .blocks .abc3 {
+    position: relative;
+    left: 10px;
+}
+
+footer .blocks .abc4 {
+    position: relative;
+    right: 60px;
+}
+
+footer .blocks .abc1 a,
+footer .blocks .abc2 a,
+footer .blocks .abc3 a,
+footer .blocks .abc4 a {
+    position: relative;
+    right: 10px;
+}
+
+footer img {
+    width: 35px;
+    height: 20px;
+}
+
+footer hr {
+    margin: 30px 0;
+    border: 0;
+    height: 0.6px;
+    background: #ccc;
+}
+
+footer .footers {
+    display: flex;
+}
+
+footer .footers p {
+    margin-left: 100px;
+}
+
+footer .footers .oplaty {
+    display: flex;
+    margin-left: 350px;
+}
+
+footer .footers .oplaty img {
+    width: 40px;
+    height: 30px;
+    padding: 10px 10px;
+    position: relative;
+    bottom: 15px;
+}
+
+/* logowanie do strony*/
+
+.posizin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+}
+
+.posizin .neumorphic {
+    width: 500px;
+    height: 492px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px #a3b1c6, -10px -10px 20px #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.posizin .neumorphic h1 {
+    font-weight: 700;
+    font-size: 24px;
+    margin: 15px;
+}
+
+.posizin .neumorphic .login {
+    color: #55556d;
+    padding: 10px;
+    margin: 10px;
+    width: 400px;
+    height: 25px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px #a3b1c6, -10px -10px 20px #fff;
+    border: none;
+}
+
+.posizin .neumorphic button {
+    width: 417px;
+    height: 45px;
+    background: #5946d7;
+    color: #fff;
+    margin: 15px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 10px 10px 20px #a3b1c6, -10px -10px 20px #fff;
+    transition: all 500ms ease;
+}
+
+.posizin .neumorphic button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.posizin .neumorphic a {
+    color: #5946d7;
+    margin: 15px;
+}
+
+/* Страница с продажей моторного масла*/
+
+.box {
+    max-height: 600px;
+}
+
+.maslo {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.olej {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.olej-text h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 50px;
+    padding-top: 30px;
+}
+
+.olej .blockk {
+    width: 300px;
+    height: auto;
+    flex-direction: column;
+    background: #fff;
+    margin: 100px;
+    border: none;
+    box-shadow: 10px 10px 20px #a3b1c6, -10px -10px 20px #fff;
+    position: relative;
+    left: -55px;
+}
+
+.olej .blockk .char {
+    max-width: 300px;
+}
+
+.olej .blockk h3 {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+.olej .blockk input {
+    width: 260px;
+    height: 40px;
+    margin: 19px;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 5px;
+}
+
+.olej .blockk .char input {
+    width: 15px;
+    height: 15px;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.olej .blockk .char label {
+    position: relative;
+    left: 45px;
+    bottom: 38px;
+}
+
+.olej .block {
+    width: 307px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px #a3b1c6, -10px -10px 20px #fff;
+    position: relative;
+    top: 25px;
+    left: -80px;
+    margin: 20px 20px;
+    transition: all 500ms ease;
+}
+
+.olej .block:hover {
+    transform: scale(1.1);
+}
+
+.olej .block h2,
+.olej .block h6,
+.olej .block p {
+    position: relative;
+    top: -40px;
+}
+
+.olej .block img {
+    width: 240px;
+    height: 180px;
+    object-fit: contain;
+    transition: all 500ms ease;
+}
+
+.olej .block img:hover {
+    transform: scale(1.1);
+}
+
+.olej .block button {
+    position: relative;
+    left: -1px;
+    top: -27px;
+    background: #5946d7;
+    color: #fff;
+    transition: all 500ms ease;
+}
+
+.olej .block button:hover {
+    background: #442ed8;
+}
+
+.olej1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    flex-wrap: nowrap;
+}
+
+.left-column {
+    flex: 0 0 300px;
+    width: 300;
+    height: auto;
+}
+
+.right-column {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    flex: 1;
+    width: 941px;
+    height: auto;
+    transform: translateX(-165px);
+    margin-top: 80px;
+}
+
+.olej1 .blockk2 {
+    width: 300px;
+    height: auto;
+    flex-direction: column;
+    background: #fff;
+    margin: 100px;
+    border: none;
+    box-shadow: 10px 10px 20px #a3b1c6, -10px -10px 20px #fff;
+    position: relative;
+    left: -55px;
+}
+
+.olej1 .blockk2 .char{
+    max-width: 300px;
+}
+
+
+.olej1 .blockk2 h3 {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+.olej1 .blockk2 input {
+    width: 260px;
+    height: 40px;
+    margin: 19px;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 5px;
+}
+
+.olej1 .blockk2 .char input {
+    width: 15px;
+    height: 15px;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.olej1 .blockk2 .char label {
+    position: relative;
+    left: 45px;
+    bottom: 38px;
+}   
+
+.olej1 .block1 {
+    width: 307px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px #a3b1c6, -10px -10px 20px #fff;
+    margin: 20px 20px;
+    transition: all 500ms ease;
+    border-radius: 10px;
+} 
+
+.olej1 .block1 img {
+    width: 240px;
+    height: 180px;
+    object-fit: contain;
+    transition: all 500ms ease;
+    margin-top: 20px;
+}
+
+.olej1 .block1:hover {
+    transform: scale(1.1);
+}
+
+.olej1 .block1 h2,
+.olej1 .block1 h6,
+.olej1 .block1 p {
+    position: relative;
+    top: -20px;
+}
+
+.olej1 .block1 img:hover {
+    transform: scale(1.1);
+}
+
+.olej1 .block1 button {
+    width: 200px;
+    height: 45px;
+    position: relative;
+    left: -1px;
+    top: -27px;
+    background: #5946d7;
+    color: #fff;
+    transition: all 500ms ease;
+    border-radius: 10px;
+    border: none;
+}
+
+.olej1 .block1 button:hover {
+    background: #442ed8;
+    transform: scale(1.1);
+}
+
+/* Характеристики товара */
+.char {
+    width: 1440px;
+    height: auto;
+    background: #fff;
+    box-shadow: 10px 10px 20px #a3b1c6, -10px -10px 20px #fff;
+}
+
+.towar {
+    display: flex;
+}
+
+.towar .foto {
+    margin-top: 35px;
+    margin-left: 50px;
+}
+
+.towar .foto img {
+    margin-top: -30px;
+    width: 700px;
+    height: 800px;
+    margin-left: -50px;
+}
+
+.towar .dane,
+.towar .dane1 {
+    margin-top: 245px;
+    margin-left: -55px;
+    width: 700px;
+    max-height: 300px;
+    box-shadow: 10px 10px 20px #a3b1c6, -10px -10px 20px #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.towar .dane h2 {
+    margin: 30px 0;
+    margin-left: 200px;
+}
+
+.towar .dane1 h2 {
+    margin: 30px 0;
+    margin-left: 45px;
+    width: 650px;
+}
+
+.towar .dane p {
+    color: #505255;
+    margin-left: 200px;
+}
+
+.towar .dane1 p {
+    color: #505255;
+    margin-left: 45px;
+}
+
+.towar .dane button,
+.towar .dane1 button {
+    margin-left: 200px;
+    width: 300px;
+    height: 50px;
+    background: #5946d7;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    transition: all 500ms ease;
+}
+
+.towar .dane button:hover,
+.towar .dane1 button:hover {
+    transform: scale(1.1);
+}
+
+/* Описание товара */
+
+.op {
+    display: flex;
+    gap: 30px;
+    margin-top: 35px;
+    margin-left: 50px;
+    padding-bottom: 35px;
+}
+
+.op .opis {
+    width: 800px;
+    margin-left: 300px;
+}
+
+.op .opis h4 {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.op ul {
+    list-style: none;
+}
+
+.op .charakterystyka ul li h4 {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.op .informacja { 
+    width: 100px;
+    margin-top: 40px;
+}
+
+/* Подобные продукты */
+
+.text {
+    margin-left: 50px;
+    margin-top: 35px;
+    font-size: 20px;
+}
+
+.podobne {
+    margin-left: 50px;
+    display: flex;
+    gap: 100px;
+}
+
+.podobne .block {
+    width: 400px;
+    height: auto;
+    box-shadow: 10px 10px 20px #a3b1c6, -10px -10px 20px #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    text-align: center;
+}
+
+.podobne .block img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    transition: all 500ms ease;
+}
+
+.podobne .block img:hover {
+    transform: scale(1.1);
+}
+
+
+.podobne .block button {
+    width: 100%;
+    height: 35px;
+    background: #5946d7;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.podobne .block button:hover {
+    transform: scale(1.1);
+}
+
+.podobne .block p {
+    margin: 0;
+    width: 100%;
+}
+
+/*Настройка текста в файле users*/
+.user {
+    background: #ebebef;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.user h1 {
+    color: black;
+}
+
+/*Кнопка выхода появляется при наведении на текст Gabinet*/
+.gabinet {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.exit {
+    display: none;
+    position: absolute;
+}
+
+.gabinet:hover .exit {
+    display: block;
+}
+
+.gabinet {
+    position: relative;
+    display: inline-block;
+}
+
+.gabinet a {
+    text-decoration: none;
+    display: block;
+    color: black;
+    padding: 8px 12px;
+}
+
+.gabinet .exit {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.gabinet:hover .exit {
+    display: block;
+}
+
+.gabinet .exit a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.gabinet .exit a:hover {
+    background-color: #f1f1f1;
+}
