@@ -1261,3 +1261,23 @@ footer .footers .oplaty img {
 .gabinet .exit a:hover {
     background-color: #f1f1f1;
 }
+
+/*Созданиие страницы сайта Co to jest Moto.pl*/
+
+.categories .omoto {
+    display: flex;
+    margin-top: -105px;
+}
+
+.categories .dropdown-omoto {
+    margin-top: -105px;
+}
+
+.dropdown-omoto {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-omoto:hover .dropdown-content {
+    display: block;
+}

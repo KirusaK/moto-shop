@@ -16,7 +16,7 @@
             <div class="abc1">
                 <h3>Menu firmowe</h3>
                 <ul>
-                    <li><a href="#">Co to jest Moto.pl</a></li>
+                    <li><a href="/MOTO/o_moto.php">Co to jest Moto.pl</a></li>
                 </ul>
             </div>
 
