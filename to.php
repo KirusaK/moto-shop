@@ -58,10 +58,6 @@
                         <input type="checkbox" class="ol">
                         <label for="text">BREMBO</label>
                         <input type="checkbox" class="ol">
-                        <label for="text">OPEL GM</label>
-                        <input type="checkbox" class="ol">
-                        <label for="text">OPEL GM</label>
-                        <input type="checkbox" class="ol">
                         <label for="text">Michelin</label>
                         <input type="checkbox" class="ol">
                         <label for="text">Fulda</label>

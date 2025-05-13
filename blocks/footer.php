@@ -16,7 +16,7 @@
             <div class="abc1">
                 <h3>Menu firmowe</h3>
                 <ul>
-                    <li><a href="/MOTO/o_moto.php">Co to jest Moto.pl</a></li>
+                    <li><a href="/MOTO/footer/o_moto.php">Co to jest Moto.pl</a></li>
                 </ul>
             </div>
 
@@ -34,15 +34,15 @@
             <div class="abc3">
                 <h3>Pomoc</h3>
                 <ul>
-                    <li><a href="#">Opłata za zamówienie</a></li>
-                    <li><a href="#">Dostawa zamówień</a></li>
+                    <li><a href="/MOTO/footer/oplata.php">Opłata za zamówienie</a></li>
+                    <li><a href="/MOTO/footer/dostawa.php">Dostawa zamówień</a></li>
                 </ul>
             </div>
 
             <div class="abc4">
                 <h3>Produkty i marki</h3>
                 <ul>
-                    <li><a href="#">Lista marek</a></li>
+                    <li><a href="/MOTO/footer/marki.php">Lista marek</a></li>
                 </ul>
             </div>
         </div>

@@ -1263,7 +1263,7 @@ footer .footers .oplaty img {
 }
 
 /*Созданиие страницы сайта Co to jest Moto.pl*/
-
+/*Редактирую header*/
 .categories .omoto {
     display: flex;
     margin-top: -105px;
@@ -1280,4 +1280,87 @@ footer .footers .oplaty img {
 
 .dropdown-omoto:hover .dropdown-content {
     display: block;
+}
+
+/*Редактирую текст*/
+
+.text1 {
+    width: 540px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 450px;
+}
+
+.text1 h1 {
+    text-align: center;
+    color: #5946d7;
+    padding-bottom: 5px;
+}
+
+.text2 {
+    margin-left: 480px;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Стили для страницы с способами оплаты*/
+
+.oplata {
+    width: 100px;
+    display: flex;
+    margin-left: 450px;
+}
+
+.oplata img {
+    margin-right: 50px;
+    padding: 20px;
+}
+
+/*Стрили для страницы с способом доставки*/
+
+.dostawa1,
+.dostawa2,
+.dostawa3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -350px;
+}
+
+.dostawa2 {
+    margin-left: -390px;
+}
+
+.dostawa1 img,
+.dostawa2 img,
+.dostawa3 img {
+    width: 100px;
+    height: 60px;
+}
+
+/*Стили для страницы с марками*/
+
+.text1 h2 {
+    color: black;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.marki {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.marki .marki1,
+.marki .marki2,
+.marki .marki3 {
+    margin: 50px;
+}
+
+.marki .marki1 p,
+.marki .marki2 p,
+.marki .marki3 p {
+    padding-bottom: 5px;
 }
