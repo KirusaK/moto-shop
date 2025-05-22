@@ -43,32 +43,35 @@
         <div class="olej-text">
             <h2>Nadwozie</h2>
         </div>
-        <div class="olej">
+        <div class="left-column">
             <div class="blockk">
                 <h3>Marka</h3>
-                <input type="text" placeholder="Szybkie wyszukiwanie">
-                <div class="char">
-                    <input type="checkbox" class="ol">
-                    <label for="text">VAN WEZEL</label>
-                    <input type="checkbox" class="ol">
-                    <label for="text">BLIC </label>
-                </div>
+                <form id="filter-form" method="POST" action="nadwozie.php">
+                    <?php $products = require 'lib/filter.php'; ?>
+
+                    <div class="char brand-filter">
+                        <input type="checkbox" id="van wezel" name="brand" value="VAN WEZEL" class="ol">
+                        <label for="VAN WEZEL">VAN WEZEL</label>
+                        <input type="checkbox" id="blic" name="brand" value="BLIC" class="ol">
+                        <label for="BLIC">BLIC </label>
+                    </div>
+                </form>
             </div>
-            <div class="block">     
+            <div class="block" data-brand="VAN WEZEL">     
                 <img src="img/nadwozie1.jpg" alt="">
                 <h2>VAN WEZEL</h2>
                 <h6>VAN WEZEL Maska silnika odpowiednie do MERCEDES-BENZ Klasa A </h6>
                 <p>Numer artykułu: 035933</p>
                 <button type="button" onclick="location.href='produkt/nadwozie_vanwezel.php'">2774,74 zl</button>
             </div>
-            <div class="block">
+            <div class="block" data-brand="VAN WEZEL">
                 <img src="img/nadwozie2.jpg" alt="">
                 <h2>VAN WEZEL</h2>
                 <h6>VAN WEZEL Zderzak odpowiednie do OPEL ASTRA</h6>
                 <p>Nr artykułu: 141824</p>
                 <button type="button" onclick="location.href='produkt/nadwozie_vanwezel2.php'">576,81 zl</button>
             </div>
-            <div class="block">
+            <div class="block" data-brand="BLIC">
                 <img src="img/nadwozie3.jpg" alt="">
                 <h2>BLIC </h2>
                 <h6>BLIC Zderzak odpowiednie do OPEL ASTRA </h6>
@@ -81,3 +84,21 @@
     <?php require_once "blocks/footer.php"; ?>
 </body>
 </html>
+
+<script>
+document.querySelectorAll('.brand-filter input[type="checkbox"]').forEach(checkbox => {
+  checkbox.addEventListener('change', () => {
+    const checkedBrands = Array.from(document.querySelectorAll('.brand-filter input[type="checkbox"]:checked'))
+                               .map(cb => cb.value);
+
+    document.querySelectorAll('.left-column .block').forEach(block => {
+      const brand = block.getAttribute('data-brand');
+      if (checkedBrands.length === 0 || checkedBrands.includes(brand)) {
+        block.classList.remove('hidden'); // Показываем плавно
+      } else {
+        block.classList.add('hidden'); // Прячем без резкого исчезновения
+      }
+    });
+  });
+});
+</script>

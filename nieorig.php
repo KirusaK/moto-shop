@@ -43,7 +43,7 @@
         <div class="olej-text">
             <h2>VAZ, GAZ, KAMAZ</h2>
         </div>
-        <div class="olej">
+        <div class="left-column">
             <div class="blockk">
                 <h3>Marka</h3>
                 <input type="text" placeholder="Szybkie wyszukiwanie">

@@ -36,8 +36,8 @@ This is my **first serious web project**, representing a fully functional online
 ![Category](screenshots/category.png)
 
 ### 🛒 Shopping Cart
-![Cart 1](screenshots/car1.png)  
-![Cart 2](screenshots/car2.png)
+![Cart 1](screenshots/cart1.png)  
+![Cart 2](screenshots/cart2.png)
 
 ### 🔑 Login / Registration
 ![Login](screenshots/login.png)  

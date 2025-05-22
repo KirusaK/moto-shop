@@ -6,13 +6,13 @@
 }
 
 body {
-    width: 1450px;
+    max-width: 1450px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 16px;
     color: black;
     background: #fff;
-    padding-left: 40px;
+    margin: 0 auto;
 }
 /*Wszystkie linki będą niepodkreślone*/
 a {
@@ -786,11 +786,13 @@ footer .footers .oplaty img {
     width: 100%;
 }
 
-.olej {
+.left-column {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: auto;
+    min-height: 600px;
 }
 
 .olej-text h2 {
@@ -800,8 +802,9 @@ footer .footers .oplaty img {
     padding-top: 30px;
 }
 
-.olej .blockk {
-    width: 300px;
+.left-column .blockk {
+    display: flex;
+    min-width: 300px;
     height: auto;
     flex-direction: column;
     background: #fff;
@@ -812,17 +815,17 @@ footer .footers .oplaty img {
     left: -55px;
 }
 
-.olej .blockk .char {
+.left-column .blockk .char {
     max-width: 300px;
 }
 
-.olej .blockk h3 {
+.left-column .blockk h3 {
     font-size: 18px;
     font-weight: 600;
     padding: 10px 20px;
 }
 
-.olej .blockk input {
+.left-column .blockk input {
     width: 260px;
     height: 40px;
     margin: 19px;
@@ -830,7 +833,7 @@ footer .footers .oplaty img {
     border-radius: 5px;
 }
 
-.olej .blockk .char input {
+.left-column .blockk .char input {
     width: 15px;
     height: 15px;
     flex-direction: column;
@@ -839,13 +842,13 @@ footer .footers .oplaty img {
 }
 
 
-.olej .blockk .char label {
+.left-column .blockk .char label {
     position: relative;
     left: 45px;
     bottom: 38px;
 }
 
-.olej .block {
+.left-column .block {
     width: 307px;
     height: 400px;
     display: flex;
@@ -854,49 +857,66 @@ footer .footers .oplaty img {
     align-items: center;
     background: #fff;
     justify-content: space-between;
-    align-items: center;
     border-radius: 5px;
     box-shadow: 10px 10px 20px #a3b1c6, -10px -10px 20px #fff;
     position: relative;
     top: 25px;
     left: -80px;
     margin: 20px 20px;
-    transition: all 500ms ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+    transform: scale(1);
 }
 
-.olej .block:hover {
+.left-column .block.hidden {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.left-column .block:hover {
     transform: scale(1.1);
 }
 
-.olej .block h2,
-.olej .block h6,
-.olej .block p {
+.left-column .block h2,
+.left-column .block h6,
+.left-column .block p {
     position: relative;
     top: -40px;
+    height: 20px;
 }
 
-.olej .block img {
+.left-column .block img {
     width: 240px;
     height: 180px;
     object-fit: contain;
     transition: all 500ms ease;
 }
 
-.olej .block img:hover {
+.left-column .block img:hover {
     transform: scale(1.1);
 }
 
-.olej .block button {
+.left-column .block button {
+    width: 200px;
+    height: 40px;
     position: relative;
     left: -1px;
     top: -27px;
     background: #5946d7;
     color: #fff;
     transition: all 500ms ease;
+    border: none;
+    border-radius: 10px;
 }
 
-.olej .block button:hover {
+.left-column .block button:hover {
     background: #442ed8;
+    transform: scale(1.1);
 }
 
 .olej1 {
@@ -984,9 +1004,15 @@ footer .footers .oplaty img {
     border-radius: 5px;
     box-shadow: 10px 10px 20px #a3b1c6, -10px -10px 20px #fff;
     margin: 20px 20px;
-    transition: all 500ms ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
     border-radius: 10px;
 } 
+
+.olej1 .block1.hidden {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+}
 
 .olej1 .block1 img {
     width: 240px;

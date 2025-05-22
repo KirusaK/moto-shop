@@ -43,11 +43,8 @@
         <div class="olej-text">
             <h2>VAZ, GAZ, KAMAZ</h2>
         </div>
-        <div class="olej">
-            <div class="blockk">
-                <h3>Marka</h3>
-                <input type="text" placeholder="Szybkie wyszukiwanie">
-            </div>
+        <div class="left-column">
+            
             <div class="block">     
                 <img src="img/vaz1.jpg" alt="">
                 <br>

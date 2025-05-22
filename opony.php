@@ -43,34 +43,37 @@
         <div class="olej-text">
             <h2>Opony</h2>
         </div>
-        <div class="olej">
+        <div class="left-column">
             <div class="blockk">
                 <h3>Marka</h3>
-                <input type="text" placeholder="Szybkie wyszukiwanie">
-                <div class="char">
-                    <input type="checkbox" class="ol">
-                    <label for="text">Michelin</label>
-                    <input type="checkbox" class="ol">
-                    <label for="text">Fulda</label>
-                    <input type="checkbox" class="ol">
-                    <label for="text">Bridgestone</label>
-                </div>
+                <form id="filter-form" method="POST" action="opony.php">
+                    <?php $products = require 'lib/filter.php'; ?>
+
+                    <div class="char brand-filter">
+                        <input type="checkbox" id="michelin" name="brand" value="Michelin" class="ol">
+                        <label for="Michelin">Michelin</label>
+                        <input type="checkbox" id="fulda" name="brand" value="Fulda" class="ol">
+                        <label for="Fulda">Fulda</label>
+                        <input type="checkbox" id="bridgestone" name="brand" value="Bridgestone" class="ol">
+                        <label for="Bridgestone">Bridgestone</label>
+                    </div>
+                </form>
             </div>
-            <div class="block">     
+            <div class="block" data-brand="Michelin">     
                 <img src="img/shina.webp" alt="">
                 <h2>Michelin</h2>
                 <h6>Michelin E Primacy 225/45R17 94 W XL</h6>
                 <p>Numer artykułu: 583485</p>
                 <button type="button" onclick="location.href='produkt/opony_michelin.php'">493 zl</button>
             </div>
-            <div class="block">
+            <div class="block" data-brand="Fulda">
                 <img src="img/shina2.webp" alt="">
                 <h2>Fulda</h2>
                 <h6>Fulda EcoControl HP2</h6>
                 <p>Nr artykułu: 141824</p>
                 <button type="button" onclick="location.href='produkt/opony_fulda.php'">300 zl</button>
             </div>
-            <div class="block">
+            <div class="block" data-brand="Bridgestone">
                 <img src="img/shina3.webp" alt="">
                 <h2>Bridgestone</h2>
                 <h6>Bridgestone Turanza T005 DriveGuard</h6>
@@ -83,3 +86,21 @@
     <?php require_once "blocks/footer.php"; ?>
 </body>
 </html>
+
+<script>
+document.querySelectorAll('.brand-filter input[type="checkbox"]').forEach(checkbox => {
+  checkbox.addEventListener('change', () => {
+    const checkedBrands = Array.from(document.querySelectorAll('.brand-filter input[type="checkbox"]:checked'))
+                               .map(cb => cb.value);
+
+    document.querySelectorAll('.left-column .block').forEach(block => {
+      const brand = block.getAttribute('data-brand');
+      if (checkedBrands.length === 0 || checkedBrands.includes(brand)) {
+        block.classList.remove('hidden'); // Показываем плавно
+      } else {
+        block.classList.add('hidden'); // Прячем без резкого исчезновения
+      }
+    });
+  });
+});
+</script>

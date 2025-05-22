@@ -6,6 +6,7 @@
     <title>Zarówki | MOTO.PL</title>
     <link rel="stylesheet" href="style/main.css">
 </head>
+
 <body>
     <div class="conteiner">
     <?php require_once "blocks/header2.php"; ?>
@@ -43,34 +44,36 @@
         <div class="olej-text">
             <h2>Zarowki</h2>
         </div>
-        <div class="olej">
+        <div class="left-column">
             <div class="blockk">
                 <h3>Marka</h3>
-                <input type="text" placeholder="Szybkie wyszukiwanie">
-                <div class="char">
-                    <input type="checkbox" class="ol">
-                    <label for="text">MAGNETI MARELLI</label>
-                    <input type="checkbox" class="ol">
-                    <label for="text">BOSCH</label>
-                    <input type="checkbox" class="ol">
-                    <label for="text">ALCA</label>
-                </div>
+                <form id="filter-form" method="POST" action="zarowki.php">
+
+                    <div class="char brand-filter">
+                        <input type="checkbox" id="magneti" name="brand" class="ol" value="MAGNETI MARELLI">
+                        <label class="ol" for="MAGNETI MARELLI">MAGNETI MARELLI</label>
+                        <input  type="checkbox" id="bosch" name="brand" class="ol" value="BOSCH">
+                        <label class="ol" for="BOSCH">BOSCH</label>
+                        <input type="checkbox" id="alca" name="brand" class="ol" value="ALCA">
+                        <label class="ol" for="ALCA">ALCA</label>
+                    </div>
+                </form>
             </div>
-            <div class="block">     
+            <div class="block" data-brand="MAGNETI MARELLI">     
                 <img src="img/zarowka1.jpg" alt="">
                 <h2>MAGNETI MARELLI</h2>
                 <h6>MAGNETI MARELLI Żarówka, reflektor dalekosiężny</h6>
                 <p>Nr artykułu: 123345</p>
                 <button type="button" onclick="location.href='produkt/lampa_magneti.php'">7,75 zl</button>
             </div>
-            <div class="block">
+            <div class="block" data-brand="BOSCH">
                 <img src="img/zarowka2.jpg" alt="">
                 <h2>BOSCH </h2>
                 <h6>BOSCH Żarówka, reflektor dalekosiężny </h6>
                 <p>Nr artykułu: 685827</p>
                 <button type="button" onclick="location.href='produkt/lampa_bosch.php'">7,29 zl</button>
             </div>
-            <div class="block">
+            <div class="block" data-brand="ALCA">
                 <img src="img/zarowka3.jpg" alt="">
                 <h2>ALCA</h2>
                 <h6>ALCA Żarówka, reflektor dalekosiężny</h6>
@@ -83,3 +86,21 @@
     <?php require_once "blocks/footer.php"; ?>
 </body>
 </html>
+
+<script>
+document.querySelectorAll('.brand-filter input[type="checkbox"]').forEach(checkbox => {
+  checkbox.addEventListener('change', () => {
+    const checkedBrands = Array.from(document.querySelectorAll('.brand-filter input[type="checkbox"]:checked'))
+                               .map(cb => cb.value);
+
+    document.querySelectorAll('.left-column .block').forEach(block => {
+      const brand = block.getAttribute('data-brand');
+      if (checkedBrands.length === 0 || checkedBrands.includes(brand)) {
+        block.classList.remove('hidden'); // Показываем плавно
+      } else {
+        block.classList.add('hidden'); // Прячем без резкого исчезновения
+      }
+    });
+  });
+});
+</script>

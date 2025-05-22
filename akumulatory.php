@@ -43,32 +43,35 @@
         <div class="olej-text">
             <h2>Akumulatory</h2>
         </div>
-        <div class="olej">
+        <div class="left-column">
             <div class="blockk">
                 <h3>Marka</h3>
-                <input type="text" placeholder="Szybkie wyszukiwanie">
-                <div class="char">
-                    <input type="checkbox" class="ol">
-                    <label for="text">MAXGEAR</label>
-                    <input type="checkbox" class="ol">
-                    <label for="text">BOSCH</label>
-                </div>
+                <form id="filter-form" method="POST" action="akumulatory.php">
+                    <?php require_once "lib/filter.php"; ?>
+
+                    <div class="char brand-filter">
+                        <input type="checkbox" id="maxgear" name="brand" value="MAXGEAR" class="ol">
+                        <label for="MAXGEAR">MAXGEAR</label>
+                        <input type="checkbox" id="bosch" name="brand" value="BOSCH" class="ol">
+                        <label for="BOSCH">BOSCH</label>
+                    </div>
+                </form>
             </div>
-            <div class="block">     
+            <div class="block" data-brand="MAXGEAR">     
                 <img src="img/akumulator1.png" alt="">
                 <h2>MAXGEAR</h2>
                 <h6>MAXGEAR Akumulator </h6>
                 <p>Nr artykułu: 366352</p>
                 <button type="button" onclick="location.href='produkt/akum_maxgear.php'">450,53 zl</button>
             </div>
-            <div class="block">
+            <div class="block" data-brand="MAXGEAR">
                 <img src="img/akumulator2.jpg" alt="">
                 <h2>MAXGEAR </h2>
                 <h6>MAXGEAR Akumulator</h6>
                 <p>Nr artykułu: 114352</p>
                 <button type="button" onclick="location.href='produkt/akum_maxgear2.php'">460,28 zl</button>
             </div>
-            <div class="block">
+            <div class="block" data-brand="BOSCH">
                 <img src="img/akumulator3.jpg" alt="">
                 <h2>BOSCH </h2>
                 <h6>BOSCH S3 002 Akumulato</h6>
@@ -81,3 +84,21 @@
     <?php require_once "blocks/footer.php"; ?>
 </body>
 </html>
+
+<script>
+document.querySelectorAll('.brand-filter input[type="checkbox"]').forEach(checkbox => {
+  checkbox.addEventListener('change', () => {
+    const checkedBrands = Array.from(document.querySelectorAll('.brand-filter input[type="checkbox"]:checked'))
+                               .map(cb => cb.value);
+
+    document.querySelectorAll('.left-column .block').forEach(block => {
+      const brand = block.getAttribute('data-brand');
+      if (checkedBrands.length === 0 || checkedBrands.includes(brand)) {
+        block.classList.remove('hidden'); // Показываем плавно
+      } else {
+        block.classList.add('hidden'); // Прячем без резкого исчезновения
+      }
+    });
+  });
+});
+</script>
